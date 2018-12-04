@@ -5,11 +5,12 @@ import App from './App'
 import router from './router'
 import store from './store'
 import axios from 'axios'
-import md5 from 'md5'
+import crypto from './utils/cryptoUtils'
+
 
 Vue.config.productionTip = false
 Vue.prototype.$axios = axios;
-Vue.prototype.$md5 = md5;
+Vue.prototype.$crypto = crypto;
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

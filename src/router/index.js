@@ -4,10 +4,17 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
+  base:'/dist',
+  mode: 'history',
   routes: [
     {
       path: '/',
       redirect: "/shop",
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: resolve => require(['@/components/login/Login'], resolve)
     },
     {
       path: '/index',
