@@ -6,10 +6,11 @@ Vue.use(Router)
 export default new Router({
   base:'/dist',
   mode: 'history',
+  fallback: true,
   routes: [
     {
       path: '/',
-      redirect: "/shop",
+      redirect: "/login",
     },
     {
       path: '/login',
